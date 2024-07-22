@@ -21,7 +21,7 @@ const InitialLayout = () => {
             if (credentials && credentials.accessToken && !inTabsGroup) {
                 router.replace('/(tabs)/home');
             } else if (!credentials || !credentials.accessToken) {
-                router.replace('/(tabs)/home');
+                router.replace('/login');
             }
         };
 
