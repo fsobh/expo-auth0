@@ -22,7 +22,7 @@ const InitialLayout = () => {
                 router.replace('/(tabs)/home');
             } else if (!credentials || !credentials.accessToken) {
                 router.replace('/login');
-                router.replace('/(tabs)/home');
+               // router.replace('/(tabs)/home');
             }
         };
 
