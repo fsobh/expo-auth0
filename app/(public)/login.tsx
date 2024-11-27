@@ -6,11 +6,11 @@ import {Link, router} from "expo-router";
 import {RFValue} from "react-native-responsive-fontsize";
 // @ts-ignore
 //import LinkSDK  from "lean-react-native";
-import Logo from '../../assets/images/logo_lime.svg'
+import Logo from '../../assets/images/logo_dark.svg'
 // @ts-ignore
-import DarkLogo from "@/assets/images/logo_lime.svg";
+import DarkLogo from "@/assets/images/logo_dark.svg";
 // @ts-ignore
-import LightLogo from "@/assets/images/Masareef-logo-blue.svg";
+import LightLogo from "@/assets/images/logo_light.svg";
 
 const LoginScreen: React.FC = () => {
   const { onLogin, onLoginWithGoogle, onLoginWithApple } = useAuthZero();
@@ -23,7 +23,9 @@ const LoginScreen: React.FC = () => {
           <View style={{height:'20%'}}></View>
           {theme.dark
           ? <DarkLogo width={200} height={120} />
-          : <LightLogo width={200} height={120} />}
+          : <LightLogo width={200} height={120} />
+
+          }
           <View style={styles.content}>
         <Button style={styles.button} textColor={styles.button.color} mode="contained" onPress={onLogin}>
           {'Log In'}

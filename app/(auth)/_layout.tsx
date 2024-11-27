@@ -1,16 +1,10 @@
 import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
-
+import { Text} from 'react-native';
 // @ts-ignore
 import { Home, Cog , Menu, User} from 'lucide-react-native';
 import { useTheme } from 'react-native-paper';
-// @ts-ignore
-import DarkLogo from '../../assets/images/logo_lime.svg';
-// @ts-ignore
-import LightLogo from '../../assets/images/Masareef-logo-blue.svg';
-import { DrawerContentScrollView } from '@react-navigation/drawer';
 import CustomDrawerContent from "@/components/navigation/CustomDrawerMenu";
 
 export default function Layout() {
@@ -37,8 +31,9 @@ export default function Layout() {
                     headerShadowVisible: false,
                     headerTitle: () => (
                         theme.dark
-                            ? <DarkLogo width={120} height={70} />
-                            : <LightLogo width={120} height={70} />
+                            //Replace these with custom svg logos for dark/light mode
+                            ? <Text style={{color: theme.colors.primary}}>Auth0 example</Text>
+                            : <Text style={{color: theme.colors.primary}}>Auth0 example</Text>
                     ),
                     headerTintColor: theme.colors.primary,
                 }}

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Stack } from 'expo-router';
 import {useTheme} from "react-native-paper";
-// @ts-ignore
-import DarkLogo from "@/assets/images/logo_lime.svg";
-// @ts-ignore
-import LightLogo from "@/assets/images/Masareef-logo-blue.svg";
+import { Text} from 'react-native';
+
 
 const PublicLayout = () => {
     const theme = useTheme();
@@ -29,8 +27,9 @@ const PublicLayout = () => {
                 options={{
                     headerTitle: () => (
                         theme.dark
-                            ? <DarkLogo width={120} height={50} />
-                            : <LightLogo width={120} height={50} />
+                            //Replace these with custom svg logos for dark/light mode
+                            ? <Text style={{color: theme.colors.primary}}>Auth0 example</Text>
+                            : <Text style={{color: theme.colors.primary}}>Auth0 example</Text>
                     )
                 }}></Stack.Screen>
             <Stack.Screen

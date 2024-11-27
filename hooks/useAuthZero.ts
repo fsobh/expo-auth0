@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
 import { useAuth0 } from 'react-native-auth0';
-import { Alert } from 'react-native';
 import {router} from "expo-router";
 
 export const useAuthZero = () => {
@@ -12,7 +10,7 @@ export const useAuthZero = () => {
 
  try {
 
-   const response = await fetch(`https://api.masareef.io/api/Auth/signup`, {
+   const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/signup`, {
      method: 'POST',
      body: JSON.stringify(user),
    });
@@ -32,7 +30,7 @@ export const useAuthZero = () => {
 
   const onLogin = async () => {
     try {
-      const credentials = await authorize({audience:"https://api.masareef.io", scope:'openid profile email'});
+      const credentials = await authorize({audience:process.env.EXPO_PUBLIC_AUTHO_AUDIENCE, scope:'openid profile email'});
       if (credentials) {
 
       }
@@ -43,7 +41,7 @@ export const useAuthZero = () => {
 
   const onLoginWithGoogle = async () => {
     try {
-      const credentials = await authorize({ connection: 'google-oauth2' , audience:"https://api.masareef.io", scope:'openid profile email'});
+      const credentials = await authorize({ connection: 'google-oauth2' , audience:process.env.EXPO_PUBLIC_AUTHO_AUDIENCE, scope:'openid profile email'});
       if (credentials) {
 
       }
@@ -54,7 +52,7 @@ export const useAuthZero = () => {
 
   const onLoginWithApple = async () => {
     try {
-      const credentials = await authorize({ connection: 'apple', audience:"https://api.masareef.io", scope:'openid profile email' });
+      const credentials = await authorize({ connection: 'apple', audience:process.env.EXPO_PUBLIC_AUTHO_AUDIENCE, scope:'openid profile email' });
       if (credentials) {
 
       }

@@ -4,9 +4,9 @@ import {LogOut} from "lucide-react-native";
 import {useTheme} from "react-native-paper";
 import {useAuthZero} from "@/hooks/useAuthZero";
 // @ts-ignore
-import DarkLogo from "@/assets/images/logo_lime.svg";
+import DarkLogo from "@/assets/images/logo_dark.svg";
 // @ts-ignore
-import LightLogo from "@/assets/images/Masareef-logo-blue.svg";
+import LightLogo from "@/assets/images/logo_light.svg";
 import React from "react";
 import DrawerHeader from "@/components/navigation/DrawerHeader";
 

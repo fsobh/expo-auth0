@@ -1,31 +1,31 @@
 {
   "expo": {
-    "name": "masareef",
-    "slug": "masareef",
+    "name": "example",
+    "slug": "example",
     "platforms": [
       "ios",
       "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/playstore.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/Masareef-logo-blue.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.masareef.io"
+      "bundleIdentifier": "com.example.io"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/playstore.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.masareef.io"
+      "package": "com.example.io"
     },
     "plugins": [
       "expo-router",
@@ -33,7 +33,7 @@
       [
         "react-native-auth0",
         {
-          "domain": "dev-t5okv6tec0yw3l52.us.auth0.com"
+          "domain": "dev-example.us.auth0.com"
         }
       ],
       [
@@ -49,9 +49,6 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "2d5acb2d-8f4e-4947-b993-a0a6b946ce40"
       }
     }
   }

@@ -5,7 +5,7 @@ import { useRouter, useSegments, Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 import { Auth0Provider, useAuth0 } from 'react-native-auth0';
-import { auth0ClientId, auth0Domain } from '@/constants/authConfig';
+
 import { ThemeProvider } from '@/ctx/ThemeContext';
 
 const InitialLayout = () => {
@@ -22,6 +22,7 @@ const InitialLayout = () => {
                 router.replace('/(tabs)/home');
             } else if (!credentials || !credentials.accessToken) {
                 router.replace('/login');
+                router.replace('/(tabs)/home');
             }
         };
 
@@ -50,7 +51,7 @@ const RootLayout = () => {
 
     return (
         <ThemeProvider>
-            <Auth0Provider domain={auth0Domain} clientId={auth0ClientId}>
+            <Auth0Provider domain={process.env.EXPO_PUBLIC_AUTH0_DOMAIN || ""} clientId={process.env.EXPO_PUBLIC_AUTH0_CLIENT_ID || ""}>
                 <InitialLayout />
             </Auth0Provider>
         </ThemeProvider>

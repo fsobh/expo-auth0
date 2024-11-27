@@ -6,7 +6,7 @@ import {RFValue} from "react-native-responsive-fontsize";
 import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 import CustomInput from "@/components/TextInput";
 // @ts-ignore
-import Logo from "@/assets/images/logo_lime.svg";
+import Logo from "@/assets/images/logo_dark.svg";
 
 
 const LoginScreen = () => {
