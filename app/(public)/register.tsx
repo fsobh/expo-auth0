@@ -1,12 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import {validatePasswordLength, validatePasswordMatch} from '@/hooks/useAuthZero';
 import {Button, useTheme} from 'react-native-paper';
 import {RFValue} from "react-native-responsive-fontsize";
 import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 import CustomInput from "@/components/TextInput";
-// @ts-ignore
-import Logo from "@/assets/images/logo_dark.svg";
 
 
 const LoginScreen = () => {
@@ -14,9 +12,6 @@ const LoginScreen = () => {
 
     const styles = createStyles(theme);
 
-    // if (isLoading) {
-    //   return <View style={styles.container}><Text>Loading</Text></View>;
-    // }
     const scrollViewRef = useRef(null);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

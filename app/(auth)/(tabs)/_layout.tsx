@@ -1,13 +1,10 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import {useTheme} from "react-native-paper";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+
     const theme = useTheme();
   return (
     <Tabs
@@ -30,38 +27,20 @@ export default function TabLayout() {
         }}
       />
         <Tabs.Screen
-            name="spending"
+            name="Page2"
             options={{
-                title: 'Spending',
+                title: 'Page 2',
                 tabBarIcon: ({ color, focused }) => (
-                    <TabBarIcon name={focused ? 'logo-usd' : 'logo-usd'} color={color} />
+                    <TabBarIcon name={focused ? 'document' : 'document-outline'} color={color} />
                 ),
             }}
         />
         <Tabs.Screen
-            name="recurring"
+            name="Page3"
             options={{
-                title: 'Recurring',
+                title: 'Page 3',
                 tabBarIcon: ({ color, focused }) => (
-                    <TabBarIcon name={focused ? 'calendar' : 'calendar-outline'} color={color} />
-                ),
-            }}
-        />
-        <Tabs.Screen
-            name="transactions"
-            options={{
-                title: 'Transactions',
-                tabBarIcon: ({ color, focused }) => (
-                    <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
-                ),
-            }}
-        />
-        <Tabs.Screen
-            name="networth"
-            options={{
-                title: 'Networth',
-                tabBarIcon: ({ color, focused }) => (
-                    <TabBarIcon name={focused ? 'stats-chart' : 'stats-chart-outline'} color={color} />
+                    <TabBarIcon name={focused ? 'document' : 'document-outline'} color={color} />
                 ),
             }}
         />

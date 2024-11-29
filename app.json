@@ -43,6 +43,9 @@
         }
       ]
     ],
+    "androidNavigationBar": {
+      "visible": "sticky-immersive"
+    },
     "experiments": {
       "typedRoutes": true
     },

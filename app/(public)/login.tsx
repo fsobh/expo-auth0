@@ -1,12 +1,9 @@
-import React, {useRef} from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 import { useAuthZero } from '@/hooks/useAuthZero';
-import {Button, Divider, useTheme} from 'react-native-paper';
-import {Link, router} from "expo-router";
+import {Button,  useTheme} from 'react-native-paper';
+import {router} from "expo-router";
 import {RFValue} from "react-native-responsive-fontsize";
-// @ts-ignore
-//import LinkSDK  from "lean-react-native";
-import Logo from '../../assets/images/logo_dark.svg'
 // @ts-ignore
 import DarkLogo from "@/assets/images/logo_dark.svg";
 // @ts-ignore
@@ -15,7 +12,7 @@ import LightLogo from "@/assets/images/logo_light.svg";
 const LoginScreen: React.FC = () => {
   const { onLogin, onLoginWithGoogle, onLoginWithApple } = useAuthZero();
   const theme = useTheme();
-  const Lean = useRef(null)
+
   const styles = createStyles(theme);
 
   return (

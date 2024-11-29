@@ -2,14 +2,14 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { useTheme} from 'react-native-paper';
 
-const RecurringScreen = () => {
+const Page3 = () => {
 
 
     const theme = useTheme()
     const styles = createStyles(theme);
     return (
         <View style={styles.container}>
-            <Text style={{color:theme.colors.onBackground}}>{`Recurring screen`}</Text>
+            <Text style={{color:theme.colors.onBackground}}>{`Page 3 screen`}</Text>
         </View>
     );
 
@@ -25,4 +25,4 @@ const createStyles = (theme: any) =>
             width: '100%'
         },
     });
-export default RecurringScreen;
+export default Page3;

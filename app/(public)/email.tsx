@@ -1,23 +1,16 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import { useAuthZero } from '@/hooks/useAuthZero';
-import { Button } from 'react-native-paper';
 
-const LoginScreen = () => {
-
-
-  // if (isLoading) {
-  //   return <View style={styles.container}><Text>Loading</Text></View>;
-  // }
+const EmailScreen = () => {
 
   return (
       <View style={styles.container}>
-     <Text>{"Emaaill"}</Text>
+     <Text>{"Email"}</Text>
       </View>
   );
 };
 
-// ... rest of your code
+
 
 const styles = StyleSheet.create({
   container: {
@@ -44,4 +37,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginScreen;
+export default EmailScreen;

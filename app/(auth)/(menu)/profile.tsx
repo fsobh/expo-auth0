@@ -6,10 +6,8 @@ import {Credentials} from "react-native-auth0";
 
 const HomeScreen = () => {
 
-  const { onLogout, user, error, isLoading ,getCredentials} = useAuthZero();
-  // if (isLoading) {
-  //   return <View style={styles.container}><Text>Loading</Text></View>;
-  // }
+  const { user,getCredentials} = useAuthZero();
+
   const [credentials, setCredentials] = React.useState<Credentials>();
   const theme = useTheme()
   useEffect(() => {

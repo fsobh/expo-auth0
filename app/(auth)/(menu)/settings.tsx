@@ -1,7 +1,7 @@
 // settings.tsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import {Divider, List, MD3Colors, useTheme as usePaperTheme} from 'react-native-paper';
+import {Divider, List, useTheme as usePaperTheme} from 'react-native-paper';
 import { useTheme } from '@/ctx/ThemeContext';
 
 const SettingsScreen = () => {
